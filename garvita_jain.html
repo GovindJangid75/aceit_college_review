@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arya College Review Collector</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Arya College Review Collector</h1>
+      <div class="header-controls">
+        <div id="clock" class="clock"></div>
+        <button id="toggleTheme">🌙</button>
+      </div>
+    </div>
+    
+    <form id="reviewForm">
+      <input type="text" id="collegeName" value="Arya College of Engineering & IT" readonly />
+      <input type="text" id="studentName" placeholder="Your Name" required />
+      
+      <div class="about-college">
+        <div class="college-photo">
+          <img src="https://www.aryacollege.in/assets/photo/blogs/featured/arya-college-jaipur.jpg" alt="Arya College of Engineering & IT - Jaipur" />
+        </div>
+        <h3>About Arya College</h3>
+        <div class="form-group">
+          <label>Basic Information</label>
+          <input type="text" id="collegeLocation" value="Jaipur, Rajasthan" readonly />
+          <input type="text" id="collegeType" value="Private" readonly />
+          <input type="text" id="establishedYear" value="2000" readonly />
+          <input type="url" id="collegeWebsite" value="https://www.aryacollege.in/" readonly />
+        </div>
+
+        <div class="form-group">
+          <label>Contact Information</label>
+          <input type="tel" id="collegePhone" value="0141-6604555" readonly />
+          <input type="email" id="collegeEmail" value="info@aryacollege.in" readonly />
+          <input type="text" id="collegeAddress" value="SP-42, RIICO Industrial Area, Kukas, Delhi Road, Near Hotel Le-Meridian, Jaipur, Rajasthan - 302028" readonly />
+        </div>
+
+        <div class="form-group">
+          <label>Academic Information</label>
+          <select id="accreditation" disabled>
+            <option value="NAAC" selected>NAAC</option>
+          </select>
+          <input type="text" id="affiliatedTo" value="RTU (Rajasthan Technical University)" readonly />
+          <input type="text" id="coursesOffered" value="B.Tech, M.Tech, MBA, Ph.D" readonly />
+          <input type="text" id="reapCode" value="REAP Code: ACEITJPR" readonly />
+        </div>
+
+        <div class="form-group">
+          <label>B.Tech Courses</label>
+          <div class="courses-list">
+            <div class="course-item">
+              <h4>Computer Science & Engineering (CSE)</h4>
+              <p>Duration: 4 Years | Intake: 120 Students</p>
+              <p>Specializations: AI & ML, Data Science</p>
+            </div>
+            <div class="course-item">
+              <h4>Information Technology (IT)</h4>
+              <p>Duration: 4 Years | Intake: 60 Students</p>
+              <p>Focus: Software Development, Networking, Cybersecurity</p>
+            </div>
+            <div class="course-item">
+              <h4>Electronics & Communication Engineering (ECE)</h4>
+              <p>Duration: 4 Years | Intake: 60 Students</p>
+              <p>Specializations: VLSI, Embedded Systems, IoT</p>
+            </div>
+            <div class="course-item">
+              <h4>Electrical Engineering (EE)</h4>
+              <p>Duration: 4 Years | Intake: 60 Students</p>
+              <p>Focus: Power Systems, Renewable Energy, Smart Grid</p>
+            </div>
+            <div class="course-item">
+              <h4>Mechanical Engineering (ME)</h4>
+              <p>Duration: 4 Years | Intake: 60 Students</p>
+              <p>Specializations: Robotics, Automation, Manufacturing</p>
+            </div>
+            <div class="course-item">
+              <h4>Civil Engineering (CE)</h4>
+              <p>Duration: 4 Years | Intake: 60 Students</p>
+              <p>Focus: Structural Design, Environmental Engineering</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <h3 class="placement-title"><i class="fas fa-briefcase"></i> Placement Information</h3>
+          <div class="placement-info">
+            <details class="placement-section">
+              <summary><i class="fas fa-chart-line"></i> Placement Statistics</summary>
+              <ul>
+                <li>Average Package: 5.5 LPA</li>
+                <li>Highest Package: 45 LPA</li>
+                <li>Placement Rate: 85%</li>
+                <li>Companies Visited: 200+</li>
+                <li>International Offers: 15%</li>
+                <li>Core Companies: 60%</li>
+              </ul>
+            </details>
+            <details class="placement-section">
+              <summary><i class="fas fa-building"></i> Top Recruiters</summary>
+              <div class="recruiter-grid">
+                <div class="recruiter-item">TCS</div>
+                <div class="recruiter-item">Infosys</div>
+                <div class="recruiter-item">Wipro</div>
+                <div class="recruiter-item">Accenture</div>
+                <div class="recruiter-item">IBM</div>
+                <div class="recruiter-item">Microsoft</div>
+                <div class="recruiter-item">Amazon</div>
+                <div class="recruiter-item">Google</div>
+                <div class="recruiter-item">Adobe</div>
+                <div class="recruiter-item">Oracle</div>
+                <div class="recruiter-item">Tech Mahindra</div>
+                <div class="recruiter-item">HCL</div>
+                <div class="recruiter-item">Capgemini</div>
+                <div class="recruiter-item">Cognizant</div>
+                <div class="recruiter-item">L&T</div>
+                <div class="recruiter-item">BHEL</div>
+              </div>
+              <div class="recruiter-details">
+                <h5>Recruitment Details</h5>
+                <ul>
+                  <li><strong>TCS:</strong> Regular campus drives with 50+ offers annually</li>
+                  <li><strong>Infosys:</strong> Multiple profiles including software development and consulting</li>
+                  <li><strong>Wipro:</strong> Offers in IT services, consulting, and business solutions</li>
+                  <li><strong>Accenture:</strong> Roles in digital transformation and technology consulting</li>
+                  <li><strong>IBM:</strong> Positions in cloud computing, AI, and cybersecurity</li>
+                  <li><strong>Microsoft:</strong> Software engineering and product development roles</li>
+                  <li><strong>Amazon:</strong> Opportunities in AWS, retail, and logistics</li>
+                  <li><strong>Google:</strong> Software engineering and product management positions</li>
+                  <li><strong>Adobe:</strong> Creative technology and digital experience roles</li>
+                  <li><strong>Oracle:</strong> Database management and cloud infrastructure positions</li>
+                  <li><strong>Tech Mahindra:</strong> Digital transformation and IT services roles</li>
+                  <li><strong>HCL:</strong> Software development and infrastructure management</li>
+                  <li><strong>Capgemini:</strong> Consulting, technology, and digital services</li>
+                  <li><strong>Cognizant:</strong> Digital business and technology services</li>
+                  <li><strong>L&T:</strong> Engineering and construction management roles</li>
+                  <li><strong>BHEL:</strong> Public sector engineering and manufacturing positions</li>
+                </ul>
+              </div>
+              <div class="recruitment-packages">
+                <h5>Package Ranges (2023-24)</h5>
+                <ul>
+                  <li><strong>International Offers:</strong> 25-45 LPA</li>
+                  <li><strong>Top Tech Companies:</strong> 12-25 LPA</li>
+                  <li><strong>IT Services:</strong> 4-8 LPA</li>
+                  <li><strong>Core Engineering:</strong> 5-10 LPA</li>
+                  <li><strong>Startup Offers:</strong> 6-15 LPA + ESOPs</li>
+                </ul>
+              </div>
+            </details>
+            <details class="placement-section">
+              <summary><i class="fas fa-tasks"></i> Placement Process</summary>
+              <ul>
+                <li>Comprehensive Pre-placement Training</li>
+                <li>Professional Resume Building</li>
+                <li>Technical Interview Preparation</li>
+                <li>Soft Skills & Personality Development</li>
+                <li>Regular Mock Interviews</li>
+                <li>Industry Expert Sessions</li>
+                <li>Placement Drives & Campus Interviews</li>
+                <li>Online Assessment Preparation</li>
+                <li>Group Discussion Practice</li>
+                <li>Technical Skill Enhancement</li>
+              </ul>
+            </details>
+            <details class="placement-section">
+              <summary><i class="fas fa-hands-helping"></i> Placement Support</summary>
+              <ul>
+                <li>Dedicated Placement Cell</li>
+                <li>Career Counseling & Guidance</li>
+                <li>Industry Connect Program</li>
+                <li>Strong Alumni Network Support</li>
+                <li>Internship Opportunities</li>
+                <li>MSME-Approved Incubation Centre</li>
+                <li>Startup Support & Mentoring</li>
+                <li>Placement Assistance for All Branches</li>
+                <li>Regular Industry Visits</li>
+                <li>Placement Records Tracking</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Hostel Facilities</label>
+          <div class="hostel-info">
+            <div class="hostel-section">
+              <h4>Boys Hostel</h4>
+              <ul>
+                <li>Separate hostels for boys with modern amenities</li>
+                <li>24/7 security and CCTV surveillance</li>
+                <li>Common room with TV and indoor games</li>
+                <li>Wi-Fi connectivity throughout the hostel</li>
+                <li>Mess facility with hygienic food</li>
+                <li>Laundry service available</li>
+                <li>Medical facility with resident doctor</li>
+              </ul>
+            </div>
+            <div class="hostel-section">
+              <h4>Girls Hostel</h4>
+              <ul>
+                <li>Separate hostels for girls with modern amenities</li>
+                <li>24/7 security and CCTV surveillance</li>
+                <li>Common room with TV and indoor games</li>
+                <li>Wi-Fi connectivity throughout the hostel</li>
+                <li>Mess facility with hygienic food</li>
+                <li>Laundry service available</li>
+                <li>Medical facility with resident doctor</li>
+              </ul>
+            </div>
+            <div class="hostel-section">
+              <h4>Hostel Rules & Regulations</h4>
+              <ul>
+                <li>Strict entry/exit timing system</li>
+                <li>Regular room inspection</li>
+                <li>No ragging policy</li>
+                <li>Cleanliness maintenance</li>
+                <li>Study hours enforcement</li>
+                <li>Guest policy compliance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Facilities</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="facilities" value="library" checked disabled> Library</label>
+            <label><input type="checkbox" name="facilities" value="sports" checked disabled> Sports Facilities</label>
+            <label><input type="checkbox" name="facilities" value="hostel" checked disabled> Hostel</label>
+            <label><input type="checkbox" name="facilities" value="cafeteria" checked disabled> Cafeteria</label>
+            <label><input type="checkbox" name="facilities" value="wifi" checked disabled> WiFi Campus</label>
+            <label><input type="checkbox" name="facilities" value="lab" checked disabled> Modern Labs</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>College Achievements</label>
+          <div class="achievements-info">
+            <div class="achievement-section">
+              <h4>Academic Excellence</h4>
+              <ul>
+                <li>NAAC 'A+' Grade Accreditation</li>
+                <li>ISO 9001:2015 Certified Institution</li>
+                <li>Best Engineering College in Rajasthan (2023)</li>
+                <li>Top 100 Engineering Colleges in India</li>
+                <li>Excellence in Technical Education Award</li>
+              </ul>
+            </div>
+            <div class="achievement-section">
+              <h4>Research & Innovation</h4>
+              <ul>
+                <li>50+ Research Papers Published Annually</li>
+                <li>15+ Patents Filed by Faculty & Students</li>
+                <li>10+ Research Projects Funded by Government</li>
+                <li>State-of-the-art Research Centers</li>
+                <li>Collaboration with International Universities</li>
+              </ul>
+            </div>
+            <div class="achievement-section">
+              <h4>Student Achievements</h4>
+              <ul>
+                <li>100+ National Level Competition Winners</li>
+                <li>50+ International Hackathon Victories</li>
+                <li>30+ Student Startups Launched</li>
+                <li>Excellence in Sports & Cultural Events</li>
+                <li>Outstanding Placement Records</li>
+              </ul>
+            </div>
+            <div class="achievement-section">
+              <h4>Industry Recognition</h4>
+              <ul>
+                <li>Best Industry-Institute Interaction Award</li>
+                <li>Excellence in Placements Award</li>
+                <li>Top Recruiter Satisfaction Rating</li>
+                <li>Industry-Ready Graduate Award</li>
+                <li>Innovation in Education Award</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="college-description-label">College Description</label>
+          <div class="college-description-container">
+            <textarea id="collegeDescription" readonly>Arya College of Engineering & I.T. (ACEIT) was established in 2000 under the patronage of the All India Arya Samaj Society of Higher and Technology Education. Located in Jaipur, Rajasthan, the college has emerged as one of the premier engineering institutions in the state.
+
+The college offers various undergraduate and postgraduate programs in engineering and management, including B.Tech, M.Tech, MBA, and Ph.D. With state-of-the-art infrastructure, well-equipped laboratories, and a team of experienced faculty members, ACEIT provides quality education and practical exposure to its students.
+
+The institution is known for its strong industry connections, excellent placement records, and focus on research and innovation. The college has received numerous accolades, including NAAC accreditation and AICTE approval. The campus features modern facilities including smart classrooms, advanced laboratories, sports complexes, and separate hostels for boys and girls.
+
+ACEIT emphasizes holistic development through various technical and cultural events, industry visits, and internship opportunities. The college has a dedicated placement cell that ensures students get placed in top companies with competitive packages.</textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Pros & Cons</label>
+          <div class="pros-cons">
+            <div class="pros">
+              <h3><i class="fas fa-thumbs-up"></i> Pros</h3>
+              <ul>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <div class="pro-content">
+                    <span class="pro-title">Excellent Placement Record</span>
+                    <p>Consistently higher placement rates and packages compared to surrounding colleges, with top companies offering competitive salaries</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <div class="pro-content">
+                    <span class="pro-title">Experienced Faculty</span>
+                    <p>Highly qualified professors with industry experience and research background, providing quality education</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <div class="pro-content">
+                    <span class="pro-title">Student Development</span>
+                    <p>Regular activities, workshops, and events for holistic development including technical skills, soft skills, and leadership</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i>
+                  <div class="pro-content">
+                    <span class="pro-title">Modern Infrastructure</span>
+                    <p>State-of-the-art facilities including smart boards, well-equipped labs, and modern classrooms for enhanced learning</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h3><i class="fas fa-thumbs-down"></i> Cons</h3>
+              <ul>
+                <li>
+                  <i class="fas fa-times-circle"></i>
+                  <div class="con-content">
+                    <span class="con-title">Heavy Workload</span>
+                    <p>Rigorous academic schedule with multiple assignments, projects, and regular assessments</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-times-circle"></i>
+                  <div class="con-content">
+                    <span class="con-title">Strict Hostel Rules</span>
+                    <p>Stringent hostel regulations including curfew timings, room inspections, and guest policies</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-times-circle"></i>
+                  <div class="con-content">
+                    <span class="con-title">Strict Attendance Rules</span>
+                    <p>Mandatory attendance requirements with consequences for falling below the threshold</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-times-circle"></i>
+                  <div class="con-content">
+                    <span class="con-title">Location</span>
+                    <p>Located far from Jaipur city center, making it challenging for day scholars and weekend activities</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fas fa-times-circle"></i>
+                  <div class="con-content">
+                    <span class="con-title">Single Cafeteria & Stationery</span>
+                    <p>The college has only one cafeteria which also doubles as the stationery shop, leading to overcrowding and limited options.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="rating">
+        <label>Rating:</label>
+        <div id="stars">
+          <span data-value="1">☆</span>
+          <span data-value="2">☆</span>
+          <span data-value="3">☆</span>
+          <span data-value="4">☆</span>
+          <span data-value="5">☆</span>
+        </div>
+      </div>
+      
+      <textarea id="reviewText" placeholder="Write your review..." required></textarea>
+      <button type="submit">Submit Review</button>
+    </form>
+
+    <h2>Reviews</h2>
+    <div id="averageRating"></div>
+    <div id="reviewsList"></div>
+
+    <div class="student-reviews">
+      <h2>Student Reviews</h2>
+      <div class="reviews-container">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <span class="reviewer-name">Rahul Sharma</span>
+              <span class="reviewer-batch">B.Tech CSE (2023)</span>
+              <span class="placement-info">
+                <span class="company">Google</span>
+                <span class="package">45 LPA</span>
+              </span>
+            </div>
+            <div class="review-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">5.0</span>
+            </div>
+          </div>
+          <div class="review-content">
+            <p>"Arya College has been an amazing journey for me. The faculty is highly qualified and supportive. The placement cell works tirelessly to ensure good opportunities. The preparation for technical interviews was excellent!"</p>
+          </div>
+          <div class="review-tags">
+            <span class="tag">Placements</span>
+            <span class="tag">Faculty</span>
+            <span class="tag">Infrastructure</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <span class="reviewer-name">Priya Patel</span>
+              <span class="reviewer-batch">B.Tech ECE (2022)</span>
+              <span class="placement-info">
+                <span class="company">Microsoft</span>
+                <span class="package">32 LPA</span>
+              </span>
+            </div>
+            <div class="review-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-value">4.5</span>
+            </div>
+          </div>
+          <div class="review-content">
+            <p>"The college has excellent lab facilities and research opportunities. I was able to work on multiple research projects and publish papers. The placement training helped me crack Microsoft's interview!"</p>
+          </div>
+          <div class="review-tags">
+            <span class="tag">Research</span>
+            <span class="tag">Placements</span>
+            <span class="tag">Campus Life</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <span class="reviewer-name">Amit Kumar</span>
+              <span class="reviewer-batch">B.Tech ME (2023)</span>
+              <span class="placement-info">
+                <span class="company">L&T</span>
+                <span class="package">12 LPA</span>
+              </span>
+            </div>
+            <div class="review-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.8</span>
+            </div>
+          </div>
+          <div class="review-content">
+            <p>"The mechanical department has state-of-the-art workshops and equipment. The industry visits and internships helped me gain practical knowledge. Got placed in L&T with a good package!"</p>
+          </div>
+          <div class="review-tags">
+            <span class="tag">Infrastructure</span>
+            <span class="tag">Placements</span>
+            <span class="tag">Practical Learning</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <span class="reviewer-name">Neha Gupta</span>
+              <span class="reviewer-batch">B.Tech IT (2022)</span>
+              <span class="placement-info">
+                <span class="company">Amazon</span>
+                <span class="package">28 LPA</span>
+              </span>
+            </div>
+            <div class="review-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-value">4.3</span>
+            </div>
+          </div>
+          <div class="review-content">
+            <p>"The IT department focuses on emerging technologies. The coding culture is strong, and there are regular hackathons and coding competitions. The placement training was very helpful in getting Amazon!"</p>
+          </div>
+          <div class="review-tags">
+            <span class="tag">Technical Skills</span>
+            <span class="tag">Competitions</span>
+            <span class="tag">Placement Training</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <span class="reviewer-name">Vikram Singh</span>
+              <span class="reviewer-batch">B.Tech CSE (2023)</span>
+              <span class="placement-info">
+                <span class="company">Adobe</span>
+                <span class="package">25 LPA</span>
+              </span>
+            </div>
+            <div class="review-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-value">4.9</span>
+            </div>
+          </div>
+          <div class="review-content">
+            <p>"The college's focus on practical learning and industry projects helped me a lot. The placement cell's mock interviews and resume building sessions were invaluable. Got my dream job at Adobe!"</p>
+          </div>
+          <div class="review-tags">
+            <span class="tag">Placements</span>
+            <span class="tag">Projects</span>
+            <span class="tag">Career Guidance</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-info">
+              <span class="reviewer-name">Ananya Sharma</span>
+              <span class="reviewer-batch">B.Tech ECE (2023)</span>
+              <span class="placement-info">
+                <span class="company">Intel</span>
+                <span class="package">18 LPA</span>
+              </span>
+            </div>
+            <div class="review-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-value">4.6</span>
+            </div>
+          </div>
+          <div class="review-content">
+            <p>"The ECE department has excellent lab facilities and research opportunities. The faculty's guidance and the college's industry connections helped me secure a position at Intel with a great package!"</p>
+          </div>
+          <div class="review-tags">
+            <span class="tag">Research</span>
+            <span class="tag">Placements</span>
+            <span class="tag">Industry Connect</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="query-section">
+      <h2>Have Questions?</h2>
+      <form id="queryForm" class="query-form">
+        <div class="form-group">
+          <label for="queryName">Your Name</label>
+          <input type="text" id="queryName" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="queryEmail">Email Address</label>
+          <input type="email" id="queryEmail" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="querySubject">Subject</label>
+          <select id="querySubject" required>
+            <option value="">Select a subject</option>
+            <option value="admission">Admission Related</option>
+            <option value="courses">Course Information</option>
+            <option value="hostel">Hostel Facilities</option>
+            <option value="placement">Placement Related</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="queryMessage">Your Message</label>
+          <textarea id="queryMessage" placeholder="Type your question here..." required></textarea>
+        </div>
+        <button type="submit" class="submit-query">Submit Query</button>
+      </form>
+    </div>
+
+    <div class="developer-info">
+      <h3>About the Team</h3>
+      <div class="developer-card">
+        <div class="developer-header">
+          <h4>Hackathon Project</h4>
+          <span class="badge">Made with ❤️</span>
+        </div>
+        <p class="developer-description">
+          This website was developed as part of a hackathon project to create a comprehensive review system for Arya College. The project aims to provide a platform where students can share their experiences and help future students make informed decisions about their education.
+        </p>
+
+        <div class="team-members">
+          <h5>Team Members:</h5>
+          <div class="member-cards">
+            <div class="member-card">
+              <h4>Garvita Jain</h4>
+              <span class="role">Project Presenter</span>
+              <p>Responsible for presenting the project to stakeholders and audience</p>
+            </div>
+            <div class="member-card">
+              <h4>Aakriti Gupta</h4>
+              <span class="role">UI/UX Designer</span>
+              <p>Designed user interface and enhanced user experience</p>
+            </div>
+            <div class="member-card">
+              <h4>Bhawni Kumri</h4>
+              <span class="role">Testing Specialist</span>
+              <p>Conducted thorough testing and quality assurance</p>
+            </div>
+            <div class="member-card">
+              <h4>Govind Jangid</h4>
+              <span class="role">Logic Developer</span>
+              <p>Implemented core logic and functionality</p>
+            </div>
+          </div>
+        </div>
+        <div class="tech-stack">
+          <h5>Technologies Used:</h5>
+          <div class="tech-tags">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="features-list">
+          <h5>Key Features:</h5>
+          <ul>
+            <li>Dark/Light Mode Toggle</li>
+            <li>Responsive Design</li>
+            <li>Real-time Rating System</li>
+            <li>Review Management</li>
+            <li>College Information Display</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
